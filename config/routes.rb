@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	resources :users, only:[:show, :new, :create]
+	resources :events, only:[:index, :new, :create, :show]
   # get 'log_in', to: 'users#log_in'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

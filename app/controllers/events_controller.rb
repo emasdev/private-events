@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+	before_action :logged_in?, except: %i[show index]
+
 	def index
 		@events = Event.all
 	end
@@ -14,6 +16,7 @@ class EventsController < ApplicationController
 	end
 
 	def show
+		@event = Event.find(params[:id])
 	end
 
 	private

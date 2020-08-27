@@ -1,20 +1,38 @@
-<h2>Event Data:</h2>
+<div class=row>
 
-<label>Title: </label>
-<p><%= @event.title %></p>
+  <div class="col">
 
-<label>Date: </label>
-<p><%= @event.date %></p>
+    <h2>Event Data:</h2>
 
-<label>Local: </label>
-<p><%= @event.local %></p>
+    <label>Title: </label>
+    <p><%= @event.title %></p>
 
-<label>Description: </label>
-<p><%= @event.description %></p>
+    <label>Date: </label>
+    <p><%= @event.date %></p>
 
-<label>Author: </label>
-<p><%= @event.creator.name %></p>
+    <label>Local: </label>
+    <p><%= @event.local %></p>
 
-<td><%= link_to "Attend", event_event_attendings_path(@event.id), method: :post %></td>
+    <label>Description: </label>
+    <p><%= @event.description %></p>
+
+    <label>Author: </label>
+    <p><%= @event.creator.name %></p>
+
+    <td><%= link_to "Attend", event_event_attendings_path(@event.id), method: :post %></td>
+
+  </div>
+
+  <div class="col-4">
+    <p>Attendance List</p>
+    <ul class="list-group">
+    <% @event.attendees.each do |attendee| %>
+      <li class="list-group-item"><%= attendee.name %></li>
+    <% end %>
+    </ul>
+  </div>
+  
+</div>
+
 
 

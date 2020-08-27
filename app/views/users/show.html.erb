@@ -1,26 +1,21 @@
-<h2>Events</h2>
+<div class=row>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Location</th>
-      <th>Description</th>
-      <th></th>
-    </tr>
-  </thead>
+  <div class="col">
 
-  <tbody>
-  
-    <% @user.events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.date %></td>
-        <td><%= event.local %></td>
-        <td><%= event.description %></td>
-        <td><%= link_to 'Show', event %></td>
-      </tr>
+    <h2>User Data:</h2>
+
+    <label>Name: </label>
+    <p><%= @user.name %></p>
+
+  </div>
+
+  <div class="col-4">
+    <p>Attendance List</p>
+    <ul class="list-group">
+    <% @user.attended_events.each do |event| %>
+      <li class="list-group-item"><%= event.title %></li>
     <% end %>
-  </tbody>
-</table>
+    </ul>
+  </div>
+  
+</div>

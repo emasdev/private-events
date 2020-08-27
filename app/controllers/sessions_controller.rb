@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
-  def new
-  end
+  def new; end
 
   def create
     @user = User.find_by(name: params[:name])
@@ -12,16 +11,12 @@ class SessionsController < ApplicationController
     end
   end
 
-  def login
-
-  end
+  def login; end
 
   def logout
     reset_session
     redirect_to '/welcome'
-
   end
 
-  def welcome
-  end
+  def welcome; end
 end

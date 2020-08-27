@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 	resources :users, only:[:show, :new, :create]
-	resources :events, only:[:index, :new, :create, :show]
+  resources :events, only:[:index, :new, :create, :show]
+  resources :event_attendings, only:[:create]
+  root 'sessions#welcome'
   # get 'log_in', to: 'users#log_in'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

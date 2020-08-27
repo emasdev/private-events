@@ -6,7 +6,7 @@
       <th>Date</th>
       <th>Location</th>
       <th>Description</th>
-      <th></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -19,6 +19,7 @@
         <td><%= event.local %></td>
         <td><%= event.description %></td>
         <td><%= link_to 'Show', event %></td>
+        <td><%= link_to "Attend", event_attendings_path %></td>
       </tr>
     <% end %>
   </tbody>

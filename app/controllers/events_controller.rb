@@ -12,7 +12,7 @@ class EventsController < ApplicationController
 	def create
 		@event = current_user.events.build(event_params)
 		@event.save
-		redirect_to '/events/index'
+		redirect_to "/events/#{@event.id}"
 	end
 
 	def show

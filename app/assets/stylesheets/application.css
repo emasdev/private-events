@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar {
+  background: rgb(139, 139, 139);
+  background: linear-gradient(
+    0deg,
+    rgba(139, 139, 139, 0) 0%,
+    rgba(203, 138, 231, 1) 100%
+  );
+}
+
+.navbar-brand img {
+  height: 200px;
+}
+
+.navbar-brand h1 {
+  color: yellowgreen;
+}

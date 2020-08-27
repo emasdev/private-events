@@ -12,14 +12,28 @@
 
   <body>
   <!-- Just an image -->
-    <nav class="navbar navbar-light bg-light">
-      <h1 class="navbar-brand">Private Events</h1>
+    <nav class="navbar align-items-start">
+      <div class="navbar-brand">
+        <%= image_tag "rocket.svg" %>
+        <h1>Private Events</h1>
+      </div>
+
+      <div class="navbar-nav d-flex flex-row py-2">
+        <li class="nav-item px-2"><%= link_to "Users", users_path, :class => 'navbar-link' %></li>
+        <li class="nav-item px-2"><%= link_to "Events", events_path, :class => 'navbar-link' %></li>
+      </div>
+
       <div class="navbar-text">
         <% if logged_in? %>
           <span>You are Logged In, <%= current_user.name %></span> |
           <%= link_to "Logout", controller: "sessions", action: "logout", :class => 'navbar-link' %>
+        <% else %>
+          <%= link_to "Login", '/login', method: :get, :class => 'navbar-link' %> |
+          <%= link_to "Sign Up", '/users/new', method: :get, :class => 'navbar-link' %>
         <%end%>
       </div>
+
+    
 
 
 
@@ -29,7 +43,7 @@
     <%= yield %>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>

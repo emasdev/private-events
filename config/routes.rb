@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-resources :users, only:[:show, :new, :create]
+resources :users, only:[:show, :new, :create, :index]
   resources :events, only:[:index, :new, :create, :show] do
   	resources :event_attendings, only:[:create, :new]
   end

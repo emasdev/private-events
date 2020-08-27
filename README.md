@@ -1,24 +1,77 @@
-# README
+# Private Events (Rails Associations)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> We built a site similar to a private [Eventbrite](https://www.eventbrite.com/) which allows users to create events and then manage user signups. Users can create events and sign to attendee an event. Events take place at a specific date and at a location.
 
-Things you may want to cover:
+> A user can create events. A user can attend many events. An event can be attended by many users
 
-* Ruby version
+> The main goal is to demonstrate mastering in building Rails Associations
 
-* System dependencies
+## Features
 
-* Configuration
+If you're not an authenticated user
+- Create User
+- Log in
 
-* Database creation
+If you are an authenticated user
+- See the list of Events available divided by upcoming and previous events
+- See users attendance list
+- See the attendance list for a specific event
+- Register to attend an event
 
-* Database initialization
+## Built With
 
-* How to run the test suite
+- ruby '2.7.1'
+- 'rails', '~> 6.0.3', '>= 6.0.3.2'
+- 'sqlite3', '~> 1.4'
 
-* Services (job queues, cache servers, search engines, etc.)
+## Getting Started
 
-* Deployment instructions
+​To have a version on your local machine:
 
-* ...
+- Clone this repository
+- Open a terminal on the containing folder of this project
+- Run 'bundle install' to install the dependencies
+- Set the database using the command 'bin/rake db:migrate'
+- Run the server using the command 'rails server'
+
+- Access http://localhost:3000/ in your browser 
+
+- Use the links, forms and buttons to explore the features and create objects in our database
+
+
+## Authors
+
+👤 **Marilena Roque**
+
+- Github: [MarilenaRoque](https://github.com/MarilenaRoque)
+- Twitter: [@MariRoq88285995](https://twitter.com/MariRoq88285995)
+- Linkedin: [roquemarilena](https://www.linkedin.com/in/roquemarilena/)
+
+👤 **Emanuel González**
+
+- Github: [@emasdev](https://github.com/emasdev)
+- Twitter: [@elemasss](https://twitter.com/elemass)
+- Linkedin: [@emasdev](https://www.linkedin.com/in/emasdev/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
+
+
+

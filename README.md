@@ -9,10 +9,12 @@
 ## Features
 
 If you're not an authenticated user
+
 - Create User
 - Log in
 
 If you are an authenticated user
+
 - See the list of Events available divided by upcoming and previous events
 - See users attendance list
 - See the attendance list for a specific event
@@ -34,10 +36,18 @@ If you are an authenticated user
 - Set the database using the command 'bin/rake db:migrate'
 - Run the server using the command 'rails server'
 
-- Access http://localhost:3000/ in your browser 
+- Access http://localhost:3000/ in your browser
 
 - Use the links, forms and buttons to explore the features and create objects in our database
 
+## RSpec Testing
+
+This repo contains files to test the validations and associations on models.
+You can run the following command on your terminal to run the tests.
+
+> - rspec
+
+or customize them changing the files inside the spec folder.
 
 ## Authors
 
@@ -72,6 +82,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
-
-
-

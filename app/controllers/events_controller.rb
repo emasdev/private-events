@@ -6,8 +6,8 @@ class EventsController < ApplicationController
   end
 
   def new
-    if current_user.nil? 
-      redirect_to "/login" 
+    if current_user.nil?
+      redirect_to '/login'
     else
       @event = current_user.events.build
     end

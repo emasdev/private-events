@@ -1,16 +1,12 @@
 class EventsController < ApplicationController
-  before_action :logged_in?, except: %i[show index]
+  before_action :redirect_if_not_user_signed, except: %i[show index]
 
   def index
     @events = Event.all
   end
 
   def new
-    if current_user.nil?
-      redirect_to '/login'
-    else
-      @event = current_user.events.build
-    end
+    @event = current_user.events.build
   end
 
   def create
